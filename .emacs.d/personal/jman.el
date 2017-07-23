@@ -1,6 +1,6 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(setq package-list '(use-package))
+(setq package-list '(use-package flycheck-rust racer))
 ; Repos
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
@@ -40,5 +40,22 @@
 ; disable stupid spell checker
 (setq prelude-flyspell nil)
 
+; Rust stuff
+
 ; run rustfmt everytime you save a buffer
 (setq rust-format-on-save t)
+
+;; flycheck-rust
+(use-package flycheck-rust
+	:init
+	(add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
+; Racer
+(use-package racer
+	:init
+    (add-hook 'rust-mode-hook #'racer-mode)
+	(add-hook 'racer-mode-hook #'eldoc-mode)
+	(global-set-key (kbd "C-c ?") 'racer-describe)
+	(global-set-key (kbd "C-c .") 'racer-find-definition)
+	(global-set-key (kbd "C-c ,") 'pop-tag-mark)
+	)

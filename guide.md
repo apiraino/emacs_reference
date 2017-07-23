@@ -6,14 +6,15 @@
 
 <http://physics.clarku.edu/sip/tutorials/intro_emacs.html>
 
-## Push/Pop to jump around in Python code ##
+## Push/Pop to jump around in Python code (provided by Prelude) ##
 
-`C-c .` + `C-c ,` push/pop into code
+`C-c .` and `C-c ,` jump to definition, jump back
 
 ## Indent/Unindent a selected region ##
 
 `C-u 4` + `C-x TAB` +indent
 `C-u -4`, `C-x TAB` -indent
+`C-x TAB` then arrow left/right
 
 ## Global search and replace ##
 
@@ -35,7 +36,7 @@ https://www.gnu.org/software/emacs/manual/html_node/emacs/Change-Window.html
 
 ## Save the current buffer as new file (write-file) a.k.a. `save as` ##
 
-C-x C-w
+`C-x C-w`
 
 ## Rename current file in buffer ##
 
@@ -51,7 +52,7 @@ R to rename the file (or dired-do-rename).
 
 `C-c p s g`     New grep shortcut
 
-## Show Python docstring for function ##
+## Show Python docstring for function (provided by Prelude) ##
 
 `C-c ?`
 
@@ -142,7 +143,7 @@ R to rename the file (or dired-do-rename).
 
 `M-;`
 
-## Update EMACS packages
+## Update all installed EMACS packages
 
 `M-x package-list-packages`
 
@@ -151,3 +152,6 @@ R to rename the file (or dired-do-rename).
 ## Kill some buffers
 
 M-x kill-some-buffers
+
+## Find command defined by a key binding
+`C-h k` then execute the keycombo
