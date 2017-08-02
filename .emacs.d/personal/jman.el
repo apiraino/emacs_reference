@@ -1,6 +1,6 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(setq package-list '(use-package ag flycheck-rust racer))
+(setq package-list '(use-package ag flycheck-rust racer yaml-mode))
 ; Repos
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
