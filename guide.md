@@ -155,3 +155,12 @@ M-x kill-some-buffers
 
 ## Find command defined by a key binding
 `C-h k` then execute the keycombo
+
+## Magit survival guide
+
+Get into Magit: `M-x magit-status`
+Diff changes: `d`
+Stage or unstage changes: `s` and `u`
+Commit changes: `c`
+Write commit message then `C-x s` and `C-c C-c`
+Push to origin: `P u`

@@ -1,6 +1,6 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(setq package-list '(use-package flycheck-rust racer))
+(setq package-list '(use-package ag flycheck-rust racer))
 ; Repos
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
@@ -47,15 +47,15 @@
 
 ;; flycheck-rust
 (use-package flycheck-rust
-	:init
-	(add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+    :init
+    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 ; Racer
 (use-package racer
-	:init
+    :init
     (add-hook 'rust-mode-hook #'racer-mode)
-	(add-hook 'racer-mode-hook #'eldoc-mode)
-	(global-set-key (kbd "C-c ?") 'racer-describe)
-	(global-set-key (kbd "C-c .") 'racer-find-definition)
-	(global-set-key (kbd "C-c ,") 'pop-tag-mark)
-	)
+    (add-hook 'racer-mode-hook #'eldoc-mode)
+    (global-set-key (kbd "C-c ?") 'racer-describe)
+    (global-set-key (kbd "C-c .") 'racer-find-definition)
+    (global-set-key (kbd "C-c ,") 'pop-tag-mark)
+)
