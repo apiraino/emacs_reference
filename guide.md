@@ -159,8 +159,13 @@ M-x kill-some-buffers
 ## Magit survival guide
 
 Get into Magit: `M-x magit-status`
+
 Diff changes: `d`
-Stage or unstage changes: `s` and `u`
-Commit changes: `c`
+
+Stage, unstage, discard hunk: `s`, `u` and `d`
+
+Commit changes: `c` then `c`
+
 Write commit message then `C-x s` and `C-c C-c`
+
 Push to origin: `P u`
