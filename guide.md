@@ -1,8 +1,14 @@
-## Run FlyCheck ##
+## First emacs setup
+
+`sudo apt install emacs25-nox`
+#### Install Prelude: https://github.com/bbatsov/prelude
+#### Copy my personal emacs config
+
+## Run FlyCheck
 
 `C-c ! l, n, ...`
 
-## Common commands to move around ##
+## Common commands to move around
 
 <http://physics.clarku.edu/sip/tutorials/intro_emacs.html>
 
@@ -169,3 +175,17 @@ Commit changes: `c` then `c`
 Write commit message then `C-x s` and `C-c C-c`
 
 Push to origin: `P u`
+
+## Rust specific setup
+
+- install racer
+
+`$ cargo install racer`
+
+`$ rustup component add rust-src`
+
+`$ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"`
+
+- Install autoformatter
+
+`$ cargo install rustfmt`
