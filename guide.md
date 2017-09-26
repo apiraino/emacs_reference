@@ -1,8 +1,9 @@
 ## First emacs setup
 
-`sudo apt install emacs25-nox`
-#### Install Prelude: https://github.com/bbatsov/prelude
-#### Copy my personal emacs config
+* Install latest Emacs 25
+* Install Prelude: https://github.com/bbatsov/prelude
+* Copy `prelude-modules.el` from samples, enable Python module
+* Copy my emacs config files in the `personal` dir
 
 ## Run FlyCheck
 
@@ -178,14 +179,14 @@ Push to origin: `P u`
 
 ## Rust specific setup
 
-- install racer
+* install racer
 
-`$ cargo install racer`
+  `$ cargo install racer`
 
-`$ rustup component add rust-src`
+  `$ rustup component add rust-src`
 
-`$ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"`
+  `$ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"`
 
-- Install autoformatter
+* Install autoformatter
 
-`$ cargo install rustfmt`
+  `$ cargo install rustfmt`
