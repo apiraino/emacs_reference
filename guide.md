@@ -177,6 +177,10 @@ Write commit message then `C-x s` and `C-c C-c`
 
 Push to origin: `P u`
 
+eval buffer (f.e. to refresh pkg installed):
+
+`M-x eval-buffer` in your buffer with your custom LISP config file
+
 ## Rust specific setup
 
 * install racer

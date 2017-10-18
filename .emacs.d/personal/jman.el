@@ -1,6 +1,6 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(setq package-list '(use-package ag flycheck-rust racer yaml-mode))
+(setq package-list '(use-package ag flycheck elpy flycheck-rust racer yaml-mode py-autopep8 ))
 ; Repos
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
@@ -16,18 +16,18 @@
 
 ;; Get and config Jedi (Python IDE)
 (use-package jedi
-        :ensure t
-        :init
-        (add-hook 'python-mode-hook 'jedi:setup)
-        (setq jedi:environment-root ".")
-        (setq jedi:environment-virtualenv "./virtual")
-        (setq jedi:complete-on-dot t))
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (setq jedi:environment-root ".")
+  (setq jedi:environment-virtualenv "./virtual")
+  (setq jedi:complete-on-dot t))
 
 ;; Python header on new buffers
- (auto-insert-mode)  ;;; Adds hook to find-files-hook
-    (setq auto-insert-directory "~/.emacs.d/personal/") ;;; Or use custom, *NOTE* Trailing slash important
-    (setq auto-insert-query nil) ;;; If you don't want to be prompted before insertion
-    (define-auto-insert "\.py" "my-python-template.py")
+(auto-insert-mode)  ;;; Adds hook to find-files-hook
+(setq auto-insert-directory "~/.emacs.d/personal/") ;;; Or use custom, *NOTE* Trailing slash important
+(setq auto-insert-query nil) ;;; If you don't want to be prompted before insertion
+(define-auto-insert "\.py" "my-python-template.py")
 
 ;; Enable AbbrevMode
 ;; https://www.emacswiki.org/emacs/AbbrevMode
@@ -39,6 +39,16 @@
 
 ; disable stupid spell checker
 (setq prelude-flyspell nil)
+
+
+; Python linter (pep8) on save
+
+; Only run flymake if I've not been typing for 5 seconds
+(setq flymake-no-changes-timeout 5)
+(use-package py-autopep8
+  :init
+  (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
+
 
 ; Rust stuff
 
