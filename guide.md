@@ -194,3 +194,9 @@ eval buffer (f.e. to refresh pkg installed):
 * Install autoformatter
 
   `$ cargo install rustfmt`
+
+* Cargo specific commands available
+
+  `C-c C-c C-b` to run cargo build
+  `C-c C-c C-r` to run cargo run
+  `C-c C-c C-t` to run cargo test
