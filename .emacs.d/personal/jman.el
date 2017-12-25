@@ -1,6 +1,6 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(defvar package-list '(use-package ag flycheck elpy flycheck-rust racer yaml-mode py-autopep8))
+(defvar package-list '(use-package ag flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -13,6 +13,9 @@
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
+
+; configure git-gutter
+(global-git-gutter-mode t)
 
 ; nlinum broken as of v1.8.1
 ; Activate and configure nlinum
