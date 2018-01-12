@@ -1,6 +1,6 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(defvar package-list '(use-package ag flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter))
+(defvar package-list '(use-package ag jedi flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -49,9 +49,8 @@
 
 (setq tab-width 4)
 
-; disable stupid spell checker
+; disable spell checker
 (defvar prelude-flyspell nil)
-
 
 ; Python linter (pep8) on save
 

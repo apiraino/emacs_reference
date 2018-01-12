@@ -2,7 +2,8 @@
 
 * Install latest Emacs 25
 * Install Prelude: https://github.com/bbatsov/prelude
-* Copy `prelude-modules.el` from samples, enable Python module
+* Copy `~/.emacs.d/sample/prelude-modules.el` in `~/.emacs.d/prelude-modules.el`
+* Uncomment prelude modules I'm interested in
 * Copy my emacs config files in the `personal` dir
 
 ## Run FlyCheck
