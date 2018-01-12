@@ -1,6 +1,8 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-(defvar package-list '(use-package ag jedi flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter))
+; jedi and swiper needed by prelude
+; and failed to be automatically intalled
+(defvar package-list '(use-package ag jedi swiper flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -50,7 +52,7 @@
 (setq tab-width 4)
 
 ; disable spell checker
-(defvar prelude-flyspell nil)
+(setq prelude-flyspell nil)
 
 ; Python linter (pep8) on save
 
