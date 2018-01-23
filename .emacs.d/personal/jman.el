@@ -62,15 +62,7 @@
   :init
   (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
 
-
 ; Rust stuff
-
-; run rustfmt everytime you save a buffer
-(use-package rust-mode
-  :mode "\\.rs\\'"
-  :init
-  (defvar rust-format-on-save t))
-
 
 ;; flycheck-rust
 (use-package flycheck-rust

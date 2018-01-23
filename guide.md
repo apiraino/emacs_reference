@@ -3,8 +3,20 @@
 * Install latest Emacs 25
 * Install Prelude: https://github.com/bbatsov/prelude
 * Copy `~/.emacs.d/sample/prelude-modules.el` in `~/.emacs.d/prelude-modules.el`
-* Uncomment prelude modules I'm interested in
+* Uncomment prelude modules (python, rust, etc.) I'm interested in
 * Copy my emacs config files in the `personal` dir
+
+### What's in my personal lisp file
+* `ag`: super fast grep replacement
+* `jedi`: Python autocompletion
+* `swiper`: (testing) search tool
+* `flycheck`: Python syntax-checking
+* `elpy`: Emacs Lisp Python Environment
+* `flycheck-rust`: Rust syntax-checking
+* `racer`: Rust code-completion, goto-definitionand docs browsing
+* `yaml-mode`: Major mode fpor YAML files
+* `py-autopep8`: Python PEP8 linter
+* `git-gutter`: git diff on the fly
 
 ## Run FlyCheck
 
