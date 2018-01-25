@@ -1,8 +1,8 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
 ; jedi and swiper needed by prelude
-; and failed to be automatically intalled
-(defvar package-list '(use-package ag jedi swiper flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter))
+; and failed to be automatically installed
+(defvar package-list '(use-package ag jedi swiper flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter org-journal xclip))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -78,3 +78,6 @@
     (global-set-key (kbd "C-c .") 'racer-find-definition)
     (global-set-key (kbd "C-c ,") 'pop-tag-mark)
 )
+
+; enable xclip mode
+(xclip-mode 1)
