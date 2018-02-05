@@ -209,8 +209,10 @@ M-x kill-some-buffers
 * `M-x org-journal` set journal mode
 * `C-c C-s` (<= `org-journal-search`) search term in journal (accepting the `org-read-date` format such as "-1y" or "-1m")
 * `M-x org-journal-search-forever` search term in all entries
-  buffers are opened read-only. `C-c C-q` to make them writeable.
+  buffers are opened read-only. `C-c view-mode` or `e` to edit.
+* `C-u i j` in calendar-mode (open the journal entry without view-mode)
+* `i j` to add a new header to the journal entry
 
   ref: https://www.emacswiki.org/emacs/OrgJournal
 
-  ref: https://github.com/bastibe/org-journal
+  ref: https://github.com/bastibe/org-journal/issues/93#issuecomment-360707226
