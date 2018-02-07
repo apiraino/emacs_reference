@@ -203,7 +203,25 @@ M-x kill-some-buffers
   `C-c C-c C-r` to run cargo run
   `C-c C-c C-t` to run cargo test
 
-## Org mode primer (`org-journal` specifically)
+## Org mode primer
+
+`C-c C-e` export an org buffer to something else (HTML, markdown, etc.)
+`M-x customize-variable RET org-export-backends` modify export modes enabled
+
+In order to export to Mediawiki (which I need), there's no plugin on Melpa, therefore download a lisp file `ox-wk.el` from [https://github.com/w-vi/ox-wk.el]
+
+Install these adding these to your emacs personal init file:
+```
+(load-file "~/.emacs.d/path/to/ox-wk.el")
+(require 'ox-wk)
+```
+
+Use it with:
+
+`org-wk-export-as-wiki' export to temporary buffer
+`org-wk-export-to-wiki' expot to "txt" file
+
+## org-journal
 
 * `M-x calendar` open calendar
 * `M-x org-journal` set journal mode

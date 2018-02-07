@@ -41,7 +41,7 @@
 (auto-insert-mode)  ;;; Adds hook to find-files-hook
 (defvar auto-insert-directory "~/.emacs.d/personal/") ;;; Or use custom, *NOTE* Trailing slash important
 (defvar auto-insert-query nil) ;;; If you don't want to be prompted before insertion
-(define-auto-insert "\.py" "my-python-template.py")
+(define-auto-insert "\.py" "~/.emacs.d/personal/my-python-template.py")
 
 ;; Enable AbbrevMode
 ;; https://www.emacswiki.org/emacs/AbbrevMode
@@ -79,5 +79,11 @@
     (global-set-key (kbd "C-c ,") 'pop-tag-mark)
 )
 
-; enable xclip mode
+; enable xclip mode (copy directly to Linux clipboard)
 (xclip-mode 1)
+
+; Enable Mediawiki exporter
+; https://github.com/w-vi/ox-wk.el/
+(load-file "~/.emacs.d/personal/ox-wk.el")
+(require 'ox-wk)
+
