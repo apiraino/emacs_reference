@@ -1,8 +1,8 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
-; jedi and swiper needed by prelude
 ; and failed to be automatically installed
-(defvar package-list '(use-package ag jedi swiper flycheck elpy flycheck-rust racer yaml-mode py-autopep8 git-gutter org-journal xclip))
+; n.b. jedi needed by prelude
+(defvar package-list '(use-package ag jedi elpy flycheck flycheck-rust racer yaml-mode py-autopep8 git-gutter rust-mode org-journal xclip rcirc-notify))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -87,3 +87,44 @@
 (load-file "~/.emacs.d/personal/ox-wk.el")
 (require 'ox-wk)
 
+;;;; IRC settings
+
+;; default join these channels when connecting this server
+(setq rcirc-server-alist
+      '(("irc.freenode.net"
+         :channels ("#mittelab" "#rust-beginners"))
+        ))
+
+;; TODO: znc server
+;; (setq rcirc-server-alist
+;;       '(("znc-server"
+;;          :nick "znc-username"
+;;          :password "znc-username:znc-password"
+;;          :full-name "full-name")))
+
+;; set encrypted auth file
+;; override default "~/.authinfo.gpg"
+(setq auth-sources
+      '((:source "~/.secrets/rcirc-authinfo.gpg"
+                 auth-source-debug t)))
+
+;;; https://www.emacswiki.org/emacs/rcircAutoAuthentication
+(defadvice rcirc (before rcirc-read-from-authinfo activate)
+  "Allow rcirc to read authinfo from ~/.authinfo.gpg file via the auth-source API.
+This doesn't support the chanserv auth method"
+  (unless arg
+    (dolist (p (auth-source-search :port '("nickserv" "bitlbee" "quakenet")
+                                   :require '(:port :user :secret)))
+      (let ((secret (plist-get p :secret))
+            (method (intern (plist-get p :port))))
+        (add-to-list 'rcirc-authinfo
+                     (list (plist-get p :host)
+                           method
+                           (plist-get p :user)
+                           (if (functionp secret)
+                               (funcall secret)
+                             secret)))))))
+
+;;; Libnotify notifications for rcirc
+(eval-after-load 'rcirc '(require 'rcirc-notify))
+(eval-after-load 'rcirc '(rcirc-notify-add-hooks))
