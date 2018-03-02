@@ -216,6 +216,7 @@ https://stackoverflow.com/a/271136
 ## Org mode primer
 
 `C-c C-e` export an org buffer to something else (HTML, markdown, etc.)
+
 `M-x customize-variable RET org-export-backends` modify export modes enabled
 
 In order to export to Mediawiki (which I need), there's no plugin on Melpa, therefore download a lisp file `ox-wk.el` from [https://github.com/w-vi/ox-wk.el]
@@ -228,8 +229,9 @@ Install these adding these to your emacs personal init file:
 
 Use it with:
 
-`org-wk-export-as-wiki' export to temporary buffer
-`org-wk-export-to-wiki' expot to "txt" file
+`org-wk-export-as-wiki` export to temporary buffer
+
+`org-wk-export-to-wiki` expot to "txt" file
 
 ### org-journal
 
