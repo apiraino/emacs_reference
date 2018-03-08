@@ -247,11 +247,15 @@ Exporting:
 
 * `C-c C-e` export choice screen
 
+Formatting text:
+
+* `*bold*, /italic/, _underlined_, =verbatim=, ~code~ and ‘+strike-through+’`
 
 References:
 
 - https://www.emacswiki.org/emacs/OrgJournal
 - https://github.com/bastibe/org-journal/issues/93#issuecomment-360707226
+- https://orgmode.org/manual/Markup.html#Markup
 
 ## Embedded IRC client
 
