@@ -242,6 +242,7 @@ Use it with:
   buffers are opened read-only. `C-c view-mode` or `e` to edit.
 * `C-u i j` in calendar-mode (open the journal entry without view-mode)
 * `i j` add a journal entry (or a new item in existing one)
+* `C-c C-o` open a link in default browser
 
 Exporting:
 
