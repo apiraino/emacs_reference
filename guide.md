@@ -185,9 +185,11 @@ M-x kill-some-buffers
 * Write commit message then `C-x s` and `C-c C-c`
 * `P u` to push to origin
 
-### Eval buffer (f.e. to refresh pkg installed)
+### Hot reload EMACS config (f.e. to refresh pkg installed)
 
-`M-x eval-buffer` in your buffer with your custom LISP config file
+Open your custom `.el` config file in a new buffer
+
+`M-x eval-buffer` 
 
 ### Recursively find and replace in files not already open
 
