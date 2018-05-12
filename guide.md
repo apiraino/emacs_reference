@@ -42,7 +42,9 @@
 
 ### Global search and replace
 
-`M-% string <RET> newstring <RET>`
+`M-% string <RET> newstring <RET>` (doesn't work anymore)
+
+`ESC % string <RET> newstring <RET>`
 
 ### Reload a buffer
 
