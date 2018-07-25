@@ -2,7 +2,8 @@
 ; list the packages you want
 ; and failed to be automatically installed
 ; n.b. jedi needed by prelude
-(defvar package-list '(use-package ag jedi elpy flycheck flycheck-rust racer yaml-mode py-autopep8 git-gutter rust-mode org-journal xclip rcirc-notify))
+; n.b. rust-mode depends on racer (no need to explicit the dependency)
+(defvar package-list '(use-package ag jedi elpy flycheck flycheck-rust racer yaml-mode py-autopep8 git-gutter org-journal xclip rcirc-notify))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
