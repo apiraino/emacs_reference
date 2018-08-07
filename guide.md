@@ -244,8 +244,10 @@ Use it with:
 * `C-c C-s` (<= `org-journal-search`) search term in journal (accepting the `org-read-date` format such as "-1y" or "-1m")
 * `M-x org-journal-search-forever` search term in all entries
   buffers are opened read-only. `C-c view-mode` or `e` to edit.
-* `C-u i j` in calendar-mode (open the journal entry without view-mode)
-* `i j` add a journal entry (or a new item in existing one)
+* `C-j` (in calendar-mode) view highlighted journal entry
+* `e` (in calendar-mode) to switch from read-only to edit mode for current journal entry
+* `C-u i j` (in calendar-mode) open the journal entry without view-mode
+* `C-c C-j` add a journal entry for today
 * `C-c C-o` open a link in default browser
 
 Exporting:
