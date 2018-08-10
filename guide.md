@@ -260,9 +260,10 @@ Formatting text:
 
 References:
 
-- https://www.emacswiki.org/emacs/OrgJournal
+- Org Mode manual: https://orgmode.org/manual/index.html
+- Org Mode markup for export: https://orgmode.org/manual/Markup.html#Markup
+- Org Journal: https://www.emacswiki.org/emacs/OrgJournal
 - https://github.com/bastibe/org-journal/issues/93#issuecomment-360707226
-- https://orgmode.org/manual/Markup.html#Markup
 
 ## Embedded IRC client
 
