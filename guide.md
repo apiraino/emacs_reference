@@ -214,7 +214,9 @@ https://stackoverflow.com/a/271136
 * Cargo specific commands available
 
   `C-c C-c C-b` to run cargo build
+  
   `C-c C-c C-r` to run cargo run
+  
   `C-c C-c C-t` to run cargo test
 
 ## Org mode primer
