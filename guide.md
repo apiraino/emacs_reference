@@ -214,7 +214,9 @@ https://stackoverflow.com/a/271136
 * Cargo specific commands available
 
   `C-c C-c C-b` to run cargo build
+  
   `C-c C-c C-r` to run cargo run
+  
   `C-c C-c C-t` to run cargo test
 
 ## Org mode primer
@@ -244,8 +246,10 @@ Use it with:
 * `C-c C-s` (<= `org-journal-search`) search term in journal (accepting the `org-read-date` format such as "-1y" or "-1m")
 * `M-x org-journal-search-forever` search term in all entries
   buffers are opened read-only. `C-c view-mode` or `e` to edit.
-* `C-u i j` in calendar-mode (open the journal entry without view-mode)
-* `i j` add a journal entry (or a new item in existing one)
+* `C-j` (in calendar-mode) view highlighted journal entry
+* `e` (in calendar-mode) to switch from read-only to edit mode for current journal entry
+* `C-u i j` (in calendar-mode) open the journal entry without view-mode
+* `C-c C-j` add a journal entry for today
 * `C-c C-o` open a link in default browser
 
 Exporting:
@@ -258,9 +262,10 @@ Formatting text:
 
 References:
 
-- https://www.emacswiki.org/emacs/OrgJournal
+- Org Mode manual: https://orgmode.org/manual/index.html
+- Org Mode markup for export: https://orgmode.org/manual/Markup.html#Markup
+- Org Journal: https://www.emacswiki.org/emacs/OrgJournal
 - https://github.com/bastibe/org-journal/issues/93#issuecomment-360707226
-- https://orgmode.org/manual/Markup.html#Markup
 
 ## Embedded IRC client
 
