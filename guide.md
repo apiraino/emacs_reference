@@ -244,13 +244,18 @@ Use it with:
 * `M-x calendar` open calendar
 * `M-x org-journal` set journal mode
 * `C-c C-s` (<= `org-journal-search`) search term in journal (accepting the `org-read-date` format such as "-1y" or "-1m")
-* `M-x org-journal-search-forever` search term in all entries
+* `C-f f f` search term in all entries (`org-journal-search-forever`)
   buffers are opened read-only. `C-c view-mode` or `e` to edit.
-* `C-j` (in calendar-mode) view highlighted journal entry
-* `e` (in calendar-mode) to switch from read-only to edit mode for current journal entry
-* `C-u i j` (in calendar-mode) open the journal entry without view-mode
-* `C-c C-j` add a journal entry for today
+
+#### calendar-more
+* `C-j` view highlighted journal entry
+* `e` switch from read-only to edit mode for current journal entry
+* `C-u i j` edit selected journal entry (`org-journal-new-date-entry`)
+* `C-c C-j` edit today's journal (creating a new entry, `org-journal-new-entry`)
+* `C-u C-c C-j`: edit today's journal (**without** creating a new entry, ``)
 * `C-c C-o` open a link in default browser
+
+For more, see [here](https://github.com/bastibe/org-journal/blob/9fc8eaf9279563f79d9ba7ff1d381534cfa57ec3/org-journal.el#L45)
 
 Exporting:
 
