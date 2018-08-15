@@ -251,8 +251,8 @@ Use it with:
 * `C-j` view highlighted journal entry
 * `e` switch from read-only to edit mode for current journal entry
 * `C-u i j` edit selected journal entry (`org-journal-new-date-entry`)
-* `C-c C-j` edit today's journal (creating a new entry, `org-journal-new-entry`)
-* `C-u C-c C-j`: edit today's journal (**without** creating a new entry, ``)
+* `C-c C-j` edit today's journal (creating a new entry)
+* `C-u C-c C-j`: edit today's journal (**without** creating a new entry)
 * `C-c C-o` open a link in default browser
 
 For more, see [here](https://github.com/bastibe/org-journal/blob/9fc8eaf9279563f79d9ba7ff1d381534cfa57ec3/org-journal.el#L45)
