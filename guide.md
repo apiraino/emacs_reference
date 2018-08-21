@@ -223,6 +223,10 @@ https://stackoverflow.com/a/271136
 
 `C-c C-e` export an org buffer to something else (HTML, markdown, etc.)
 
+`C-c C-o` open a link in default browser
+
+`C-c C-l` edit a link
+
 `M-x customize-variable RET org-export-backends` modify export modes enabled
 
 In order to export to Mediawiki (which I need), there's no plugin on Melpa, therefore download a lisp file `ox-wk.el` from [https://github.com/w-vi/ox-wk.el]
@@ -253,13 +257,8 @@ Use it with:
 * `C-u i j` edit selected journal entry (`org-journal-new-date-entry`)
 * `C-c C-j` edit today's journal (creating a new entry)
 * `C-u C-c C-j`: edit today's journal (**without** creating a new entry)
-* `C-c C-o` open a link in default browser
 
 For more, see [here](https://github.com/bastibe/org-journal/blob/9fc8eaf9279563f79d9ba7ff1d381534cfa57ec3/org-journal.el#L45)
-
-Exporting:
-
-* `C-c C-e` export choice screen
 
 Formatting text:
 
