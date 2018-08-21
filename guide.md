@@ -82,6 +82,8 @@ R to rename the file (or dired-do-rename).
 
 `C-c p s g`     New grep shortcut
 
+or just use `ag` (`M-x ag`)
+
 ### Show Python docstring for function (provided by Prelude)
 
 `C-c ?`
@@ -127,17 +129,11 @@ R to rename the file (or dired-do-rename).
 
 `M-g g <num>`
 
-### Go to the top of the file
+### Go to the top / bottom of the buffer
 
-`ESC <`
+`ESC <` / `ESC >`
 
-`C-Home`
-
-### Go to the bottom of the file
-
-`ESC >`
-
-`C-End`
+`C-Home` / `C-End`
 
 ### Themes
 
@@ -177,6 +173,10 @@ M-x kill-some-buffers
 
 ### Find command defined by a key binding
 `C-h k` then execute the keycombo
+
+### Break a long line into multiple lines
+
+`M-q` (toggle-truncate-lines)
 
 ### Magit survival guide
 
