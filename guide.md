@@ -64,9 +64,9 @@ https://www.gnu.org/software/emacs/manual/html_node/emacs/Change-Window.html
 
 `C-M-v`   Scroll the next window (scroll-other-window).
 
-### Save the current buffer as new file (write-file) a.k.a. `save as`
+### Save the current buffer as new file (a.k.a. "Save as ...")
 
-`C-x C-w`
+`C-x C-w` (`M-x write-file`)
 
 ### Rename current file in buffer
 
