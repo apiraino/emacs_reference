@@ -1,4 +1,11 @@
-## First emacs setup
+## Index
+
+* <a href="#general_usage">Emacs general usage</a>
+* <a href="#rust_usage">Rust specific setup</a>
+* <a href="#orgmode_usage">Basic Org mode / Org Journal usage</a>
+* <a href="#ircmode_usage">Embedded IRC client</a>
+
+### <a name="general_usage"></a>First emacs setup
 
 * Install latest Emacs 25 (don't start it yet)
 * Install Prelude: https://github.com/bbatsov/prelude
@@ -8,19 +15,19 @@
 * Start Emacs now (only desired packages will be installed)
 
 ### What's in my personal lisp file
-* `ag`: super fast grep replacement
-* `jedi`: Python autocompletion
-* `flycheck`: Python syntax-checking
-* `elpy`: Emacs Lisp Python Environment
-* `flycheck-rust`: Rust syntax-checking
-* `racer`: Rust code-completion, goto-definitionand docs browsing
-* `yaml-mode`: Major mode fpor YAML files
-* `py-autopep8`: Python PEP8 linter
-* `git-gutter`: git diff on the fly
-* `org-journal`: great tool to write a developer's diary
-* `xclip` (linux only) yanked text in emacs is available in X11 (overwrites X11 clipboard)
-* `rcirc` (embedded IRC client) configuration
-* `ox-wk` module to export from ORG mode to Dokuwiki
+* <a href="https://geoff.greer.fm/ag" target="_new">ag</a>: super fast grep replacement
+* <a href="https://github.com/davidhalter/jedi" target="_new">jedi</a>: Python autocompletion
+* <a href="http://www.flycheck.org" target="_new">flycheck</a>: Python syntax-checking
+* <a href="https://github.com/jorgenschaefer/elpy" target="_new">elpy</a>: Emacs Lisp Python Environment
+* <a href="https://github.com/flycheck/flycheck-rust" target="_new">flycheck-rust</a>: Rust syntax-checking
+* <a href="https://github.com/racer-rust/emacs-racer" target="_new">emacs-racer</a>: Rust code-completion, goto-definition and docs browsing
+* <a href="https://github.com/yoshiki/yaml-mode" target="_new">yaml-mode</a>: Major mode fpor YAML files
+* <a href="https://github.com/paetzke/py-autopep8.el" target="_new">py-autopep8</a>: Python PEP8 linter
+* <a href="https://github.com/syohex/emacs-git-gutter" target="_new">git-gutter</a>: git diff on the fly
+* <a href="https://github.com/bastibe/org-journal" target="_new">org-journal</a>: great tool to write a developer's diary
+* <a href="https://elpa.gnu.org/packages/xclip.html" target="_new">xclip</a>: (linux only) yanked text in emacs is available in X11 (overwrites X11 clipboard)
+* <a href="https://www.emacswiki.org/emacs/rcirc" target="_new">rcirc</a>: (embedded IRC client) configuration
+* <a href="https://github.com/w-vi/ox-wk.el" target="_new">ox-wk</a>: module to export from ORG mode to Dokuwiki
 
 #### Run FlyCheck
 
@@ -191,13 +198,13 @@ M-x kill-some-buffers
 
 Open your custom `.el` config file in a new buffer
 
-`M-x eval-buffer` 
+`M-x eval-buffer`
 
 ### Recursively find and replace in files not already open
 
-https://stackoverflow.com/a/271136
+See [here](https://stackoverflow.com/a/271136)
 
-## Rust specific setup
+## <a name="rust_usage"></a>Rust specific setup
 
 * install racer
 
@@ -214,12 +221,12 @@ https://stackoverflow.com/a/271136
 * Cargo specific commands available
 
   `C-c C-c C-b` to run cargo build
-  
+
   `C-c C-c C-r` to run cargo run
-  
+
   `C-c C-c C-t` to run cargo test
 
-## Org mode primer
+## <a name="orgmode_usage"></a>Org mode primer
 
 `C-c C-e` export an org buffer to something else (HTML, markdown, etc.)
 
@@ -271,7 +278,8 @@ References:
 - Org Journal: https://www.emacswiki.org/emacs/OrgJournal
 - https://github.com/bastibe/org-journal/issues/93#issuecomment-360707226
 
-## Embedded IRC client
+
+## <a name="ircmode_usage"></a>Embedded IRC client
 
 `M-x irc` enable IRC mode
 `C-u M-x rcirc` setup connection parameters (server, port, nick, channel, etc.)
