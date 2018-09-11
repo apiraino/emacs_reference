@@ -5,7 +5,7 @@
 * <a href="#orgmode_usage">Basic Org mode / Org Journal usage</a>
 * <a href="#ircmode_usage">Embedded IRC client</a>
 
-### <a name="general_usage"></a>First emacs setup
+### First emacs setup
 
 * Install latest Emacs 25 (don't start it yet)
 * Install Prelude: https://github.com/bbatsov/prelude
@@ -28,6 +28,8 @@
 * <a href="https://elpa.gnu.org/packages/xclip.html" target="_new">xclip</a>: (linux only) yanked text in emacs is available in X11 (overwrites X11 clipboard)
 * <a href="https://www.emacswiki.org/emacs/rcirc" target="_new">rcirc</a>: (embedded IRC client) configuration
 * <a href="https://github.com/w-vi/ox-wk.el" target="_new">ox-wk</a>: module to export from ORG mode to Dokuwiki
+
+## <a name="general_usage"></a>Emacs general usage
 
 #### Run FlyCheck
 
