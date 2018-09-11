@@ -160,6 +160,10 @@ or just use `ag` (`M-x ag`)
 
 `C-^`
 
+### Line Wrap
+
+`M-q` (a.k.a. `fill-paragraph`) or activate [Auto Fill Mode](https://www.emacswiki.org/emacs/AutoFillMode)
+
 ### Registers
 
 `C-x r s [a, 1, b, 5, r, ...]`: copy region into register [a, 1, b, 5, r, ...] (copy-to-register)
@@ -285,4 +289,5 @@ References:
 ## <a name="ircmode_usage"></a>Embedded IRC client
 
 `M-x irc` enable IRC mode
+
 `C-u M-x rcirc` setup connection parameters (server, port, nick, channel, etc.)
