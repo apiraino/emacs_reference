@@ -252,13 +252,14 @@ Use it with:
 
 ### org-journal
 
-* `M-x calendar` open calendar
 * `M-x org-journal` set journal mode
 * `C-c C-s` (<= `org-journal-search`) search term in journal (accepting the `org-read-date` format such as "-1y" or "-1m")
 * `C-f f f` search term in all entries (`org-journal-search-forever`)
   buffers are opened read-only. `C-c view-mode` or `e` to edit.
 
-#### calendar-more
+#### calendar-mode
+
+* `M-x calendar` open calendar
 * `C-j` view highlighted journal entry
 * `e` switch from read-only to edit mode for current journal entry
 * `C-u i j` edit selected journal entry (`org-journal-new-date-entry`)
