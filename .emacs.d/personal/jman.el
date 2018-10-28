@@ -94,7 +94,8 @@
 (setq rcirc-server-alist
       '(("irc.freenode.net"
          :channels ("#mittelab" "#rust-beginners"))
-        ))
+        )
+      )
 
 ;; TODO: znc server
 ;; (setq rcirc-server-alist
@@ -129,3 +130,25 @@ This doesn't support the chanserv auth method"
 ;;; Libnotify notifications for rcirc
 (eval-after-load 'rcirc '(require 'rcirc-notify))
 (eval-after-load 'rcirc '(rcirc-notify-add-hooks))
+
+;;; Activate Auto Fill Mode
+;;; (Org mode doesn't line wrap automatically)
+;;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
+;;; wrap at 80 columns
+;;; (setq-default fill-column 80)
+
+;;; Template for blog publishing
+(defun create_blog_stub ()
+  "Create a blog post stub"
+  (interactive)
+  (let ((post-title (read-from-minibuffer "Insert post title: ")))
+    (insert (concat
+             "---\n"
+             "layout: post\n"
+             (format "title: %s\n" post-title)
+             "---\n\n"
+             "### <a name='part_i'></a>Part I\n"
+             "### <a name='part_ii'></a>Part II\n"
+             "### <a name='part_iii'></a>Part III\n\n"
+             ))))
+(global-set-key (kbd "C-x c") 'create_blog_stub)
