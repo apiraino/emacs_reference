@@ -5,7 +5,7 @@
 * <a href="#orgmode_usage">Basic Org mode / Org Journal usage</a>
 * <a href="#ircmode_usage">Embedded IRC client</a>
 
-### <a name="general_usage"></a>First emacs setup
+### First emacs setup
 
 * Install latest Emacs 25 (don't start it yet)
 * Install Prelude: https://github.com/bbatsov/prelude
@@ -28,6 +28,8 @@
 * <a href="https://elpa.gnu.org/packages/xclip.html" target="_new">xclip</a>: (linux only) yanked text in emacs is available in X11 (overwrites X11 clipboard)
 * <a href="https://www.emacswiki.org/emacs/rcirc" target="_new">rcirc</a>: (embedded IRC client) configuration
 * <a href="https://github.com/w-vi/ox-wk.el" target="_new">ox-wk</a>: module to export from ORG mode to Dokuwiki
+
+## <a name="general_usage"></a>Emacs general usage
 
 #### Run FlyCheck
 
@@ -158,6 +160,10 @@ or just use `ag` (`M-x ag`)
 
 `C-^`
 
+### Line Wrap
+
+`M-q` (a.k.a. `fill-paragraph`) or activate [Auto Fill Mode](https://www.emacswiki.org/emacs/AutoFillMode)
+
 ### Registers
 
 `C-x r s [a, 1, b, 5, r, ...]`: copy region into register [a, 1, b, 5, r, ...] (copy-to-register)
@@ -252,13 +258,14 @@ Use it with:
 
 ### org-journal
 
-* `M-x calendar` open calendar
 * `M-x org-journal` set journal mode
 * `C-c C-s` (<= `org-journal-search`) search term in journal (accepting the `org-read-date` format such as "-1y" or "-1m")
 * `C-f f f` search term in all entries (`org-journal-search-forever`)
   buffers are opened read-only. `C-c view-mode` or `e` to edit.
 
-#### calendar-more
+#### calendar-mode
+
+* `M-x calendar` open calendar
 * `C-j` view highlighted journal entry
 * `e` switch from read-only to edit mode for current journal entry
 * `C-u i j` edit selected journal entry (`org-journal-new-date-entry`)
@@ -282,4 +289,5 @@ References:
 ## <a name="ircmode_usage"></a>Embedded IRC client
 
 `M-x irc` enable IRC mode
+
 `C-u M-x rcirc` setup connection parameters (server, port, nick, channel, etc.)
