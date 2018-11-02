@@ -1,6 +1,7 @@
 ## Index
 
 * <a href="#general_usage">Emacs general usage</a>
+* <a href="#js_usage">Javascript specific setup</a>
 * <a href="#rust_usage">Rust specific setup</a>
 * <a href="#orgmode_usage">Basic Org mode / Org Journal usage</a>
 * <a href="#ircmode_usage">Embedded IRC client</a>
@@ -209,6 +210,14 @@ Open your custom `.el` config file in a new buffer
 ### Recursively find and replace in files not already open
 
 See [here](https://stackoverflow.com/a/271136)
+
+## <a name="js_usage"></a>Javascript specific setup
+
+`C-c ! s` Flyckeck javascript: choose linter (e.g. `javascript-standard`)
+
+`C-c ! v` Flyckeck javascript: verify current linter setup
+
+`C-c ! x` Flycheck javascript: disable a linter
 
 ## <a name="rust_usage"></a>Rust specific setup
 
