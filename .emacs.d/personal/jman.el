@@ -3,7 +3,7 @@
 ; and failed to be automatically installed
 ; n.b. jedi needed by prelude
 ; n.b. rust-mode depends on racer (no need to explicit the dependency)
-(defvar package-list '(use-package ag jedi elpy flycheck flycheck-rust racer yaml-mode py-autopep8 git-gutter org-journal xclip rcirc-notify))
+(defvar package-list '(use-package ag jedi elpy flycheck flycheck-rust ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip rcirc-notify))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -85,7 +85,6 @@
 
 ; Enable Mediawiki exporter
 ; https://github.com/w-vi/ox-wk.el/
-(load-file "~/.emacs.d/personal/ox-wk.el")
 (require 'ox-wk)
 
 ;;;; IRC settings
@@ -93,7 +92,7 @@
 ;; default join these channels when connecting this server
 (setq rcirc-server-alist
       '(("irc.freenode.net"
-         :channels ("#mittelab" "#rust-beginners"))
+         :channels ("#mittelab" "#rust-beginners" "#link_cleaner"))
         )
       )
 

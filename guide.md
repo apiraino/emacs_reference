@@ -251,19 +251,17 @@ See [here](https://stackoverflow.com/a/271136)
 
 `M-x customize-variable RET org-export-backends` modify export modes enabled
 
-In order to export to Mediawiki (which I need), there's no plugin on Melpa, therefore download a lisp file `ox-wk.el` from [https://github.com/w-vi/ox-wk.el]
-
-Install these adding these to your emacs personal init file:
+To export to Mediawiki format, use `ox-wk`. Enable it by adding to your emacs personal init file:
 ```
-(load-file "~/.emacs.d/path/to/ox-wk.el")
 (require 'ox-wk)
 ```
 
-Use it with:
+And use it with:
 
-`org-wk-export-as-wiki` export to temporary buffer
+`ox-wk-export-as-wiki` export to temporary buffer
 
-`org-wk-export-to-wiki` expot to "txt" file
+`ox-wk-export-to-wiki` export to ".txt" file
+
 
 ### org-journal
 
