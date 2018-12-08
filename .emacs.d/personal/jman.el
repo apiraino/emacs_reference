@@ -92,9 +92,13 @@
 ;; default join these channels when connecting this server
 (setq rcirc-server-alist
       '(("irc.freenode.net"
-         :channels ("#mittelab" "#rust-beginners" "#link_cleaner"))
+         :channels ("#rust-beginners" "#link_cleaner"))
         )
       )
+(add-to-list 'rcirc-server-alist
+             '("irc.mozilla.org"
+               :channels ("#rocket"))
+             )
 
 ;; TODO: znc server
 ;; (setq rcirc-server-alist
