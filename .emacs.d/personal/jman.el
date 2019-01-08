@@ -150,8 +150,8 @@ This doesn't support the chanserv auth method"
              "layout: post\n"
              (format "title: %s\n" post-title)
              "---\n\n"
-             "### <a name='part_i'></a>Part I\n"
-             "### <a name='part_ii'></a>Part II\n"
-             "### <a name='part_iii'></a>Part III\n\n"
+             "### <a id=\"part_i\"></a>Title I: \n"
+             "### <a id=\"part_ii\"></a>Title II: \n"
+             "### <a id=\"part_iii\"></a>Title 3: \n\n"
              ))))
 (global-set-key (kbd "C-x c") 'create_blog_stub)
