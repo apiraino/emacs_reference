@@ -181,11 +181,14 @@ or just use `ag` (`M-x ag`)
 
 `Ux` <confirm>
 
-### Kill some buffers
+### Close buffers
 
-M-x kill-some-buffers
+`M-x` kill-some-buffers
+
+`C-x #` close all buffers
 
 ### Find command defined by a key binding
+
 `C-h k` then execute the keycombo
 
 ### Break a long line into multiple lines
@@ -248,6 +251,10 @@ See [here](https://stackoverflow.com/a/271136)
 `C-c C-o` open a link in default browser
 
 `C-c C-l` edit a link
+
+`C-c C-c` to check a checkbox (represented by a `[ ]`)
+
+`C-u C-u C-c C-c` to set a checkbox to `[-]`
 
 `M-x customize-variable RET org-export-backends` modify export modes enabled
 
