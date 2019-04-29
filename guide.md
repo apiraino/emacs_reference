@@ -181,11 +181,13 @@ or just use `ag` (`M-x ag`)
 
 `Ux` <confirm>
 
-### Close buffers
+### Close / Clean buffers
 
 `M-x` kill-some-buffers
 
 `C-x #` close all buffers
+
+ `M-x clean-buffer-list` close all unmodified buffers
 
 ### Find command defined by a key binding
 
