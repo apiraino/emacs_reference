@@ -52,6 +52,9 @@
 
 (setq tab-width 4)
 
+; Set default colum width (set-fill-column, C-x f) when formatting line length (M-q)
+(setq-default fill-column 80)
+
 ; disable spell checker
 (setq prelude-flyspell nil)
 
