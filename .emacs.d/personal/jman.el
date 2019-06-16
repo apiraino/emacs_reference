@@ -1,9 +1,10 @@
 ;; Set repo, download use-package package (wtf)
 ; list the packages you want
 ; and failed to be automatically installed
-; n.b. jedi needed by prelude
-; n.b. rust-mode depends on racer (no need to explicit the dependency)
-(defvar package-list '(use-package ag jedi elpy flycheck flycheck-rust ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip rcirc-notify))
+; - jedi needed by prelude
+; - rust-mode depends on racer (no need to explicit the dependency)
+; - flycheck-rust already configured by prelude-rust.el module
+(defvar package-list '(use-package jedi flycheck ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -69,9 +70,9 @@
 ; Rust stuff
 
 ;; flycheck-rust
-(use-package flycheck-rust
-    :init
-    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+;; (use-package flycheck-rust
+;;    :init
+;;    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 ; Racer
 (use-package racer
@@ -151,8 +152,8 @@ This doesn't support the chanserv and bitlbee auth method"
                              secret)))))))
 
 ;;; Libnotify notifications for rcirc
-(eval-after-load 'rcirc '(require 'rcirc-notify))
-(eval-after-load 'rcirc '(rcirc-notify-add-hooks))
+;; (eval-after-load 'rcirc '(require 'rcirc-notify))
+;; (eval-after-load 'rcirc '(rcirc-notify-add-hooks))
 
 ;;; Activate Auto Fill Mode
 ;;; (Org mode doesn't line wrap automatically)
