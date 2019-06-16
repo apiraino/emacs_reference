@@ -90,17 +90,34 @@
 ; https://github.com/w-vi/ox-wk.el/
 (require 'ox-wk)
 
+; Enable org journal mode
+(require 'org-journal)
+
 ;;;; IRC settings
 
 ;; default join these channels when connecting this server
+;; (setq rcirc-server-alist
+;;       '(("irc.freenode.net"
+;;          :nick "<nick>"
+;;          :password "<pwd>"
+;;          :channels ("#test-mynick"))))
+
 (setq rcirc-server-alist
       '(("irc.freenode.net"
-         :channels ("#rust-beginners" "#link_cleaner"))
+         :nick "apiraino"
+         :channels ("#rust-beginners"))
         )
       )
+
 (add-to-list 'rcirc-server-alist
-             '("irc.mozilla.org"
+             '("chat.freenode.net"
+               :nick "apiraino"
                :channels ("#rocket"))
+             )
+(add-to-list 'rcirc-server-alist
+             '("irc.gimp.org"
+               :nick "apiraino"
+               :channels ("#rust"))
              )
 
 ;; TODO: znc server
@@ -119,9 +136,9 @@
 ;;; https://www.emacswiki.org/emacs/rcircAutoAuthentication
 (defadvice rcirc (before rcirc-read-from-authinfo activate)
   "Allow rcirc to read authinfo from ~/.authinfo.gpg file via the auth-source API.
-This doesn't support the chanserv auth method"
+This doesn't support the chanserv and bitlbee auth method"
   (unless arg
-    (dolist (p (auth-source-search :port '("nickserv" "bitlbee" "quakenet")
+    (dolist (p (auth-source-search :port '("nickserv" "quakenet")
                                    :require '(:port :user :secret)))
       (let ((secret (plist-get p :secret))
             (method (intern (plist-get p :port))))
