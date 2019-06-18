@@ -10,13 +10,22 @@
 
 * Install latest Emacs 25 (don't start it yet)
 * Install Prelude: https://github.com/bbatsov/prelude
-* Copy `~/.emacs.d/sample/prelude-modules.el` in `~/.emacs.d/prelude-modules.el`
-* Uncomment prelude modules: python, rust, yaml. Comment and disable: erc, ivy
-* Copy my emacs config files in the `personal` dir
+* Prelude packages installed at startup are available in ~/.emacs.d/personal/prelude-modules.el
+* Uncomment prelude modules: python, rust, yaml. Comment and disable: erc, ivy, lsp
+* Comment out `undo-tree-mode` (I don't use it)
+    ```
+    ./core/prelude-editor.el
+     366:;; (global-undo-tree-mode)
+     367:;; (diminish 'undo-tree-mode)
+
+     ./core/prelude-packages.el
+     84:    ;; undo-tree
+     ```
+* Copy my emacs config files in the `personal` dir (do not override whole dir, though)
 * Start Emacs now (only desired packages will be installed)
 
 ### What's in my personal lisp file
-* <a href="https://geoff.greer.fm/ag" target="_new">ag</a>: super fast grep replacement
+* <a href="https://github.com/nlamirault/ripgrep.el" target="_new">gg</a>: frontend for `ripgrep` a super fast grep replacement written in Rust
 * <a href="https://github.com/davidhalter/jedi" target="_new">jedi</a>: Python autocompletion
 * <a href="http://www.flycheck.org" target="_new">flycheck</a>: Python syntax-checking
 * <a href="https://github.com/jorgenschaefer/elpy" target="_new">elpy</a>: Emacs Lisp Python Environment

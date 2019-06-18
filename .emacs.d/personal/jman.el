@@ -4,7 +4,7 @@
 ; - jedi needed by prelude
 ; - rust-mode depends on racer (no need to explicit the dependency)
 ; - flycheck-rust already configured by prelude-rust.el module
-(defvar package-list '(use-package jedi flycheck ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip))
+(defvar package-list '(use-package rg jedi flycheck ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
