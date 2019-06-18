@@ -25,7 +25,7 @@
 * Start Emacs now (only desired packages will be installed)
 
 ### What's in my personal lisp file
-* <a href="https://github.com/nlamirault/ripgrep.el" target="_new">gg</a>: frontend for `ripgrep` a super fast grep replacement written in Rust
+* <a href="https://github.com/nlamirault/ripgrep.el" target="_new">rg</a>: frontend for `ripgrep` a super fast grep replacement written in Rust
 * <a href="https://github.com/davidhalter/jedi" target="_new">jedi</a>: Python autocompletion
 * <a href="http://www.flycheck.org" target="_new">flycheck</a>: Python syntax-checking
 * <a href="https://github.com/jorgenschaefer/elpy" target="_new">elpy</a>: Emacs Lisp Python Environment
