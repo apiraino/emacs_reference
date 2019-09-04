@@ -4,7 +4,7 @@
 ; - jedi needed by prelude
 ; - rust-mode depends on racer (no need to explicit the dependency)
 ; - flycheck-rust already configured by prelude-rust.el module
-(defvar package-list '(use-package rg jedi flycheck ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip))
+(defvar package-list '(use-package rg jedi flycheck ox-wk racer yaml-mode py-autopep8 git-gutter org-journal xclip web-mode))
 ; Repos
 (defvar package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                            ("melpa" . "https://melpa.org/packages/")))
@@ -30,6 +30,9 @@
 ;  (defvar nlinum-highlight-current-line t)
 ;  )
 
+;; Workaround ELPA SSL bug (fixed in 26.3)
+;; src: https://irreal.org/blog/?p=8243
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;; Get and config Jedi (Python IDE)
 (use-package jedi
@@ -171,8 +174,25 @@ This doesn't support the chanserv and bitlbee auth method"
              "layout: post\n"
              (format "title: %s\n" post-title)
              "---\n\n"
-             "### <a id=\"part_i\"></a>Title I: \n"
-             "### <a id=\"part_ii\"></a>Title II: \n"
-             "### <a id=\"part_iii\"></a>Title 3: \n\n"
+             "### <a id=\"part_1\" href=\"#part_1\">&#182;</a> Title 1: \n"
+             "### <a id=\"part_2\" href=\"#part_2\">&#182;</a> Title 2: \n"
+             "### <a id=\"part_3\" href=\"#part_3\">&#182;</a> Title 3: \n\n"
              ))))
 (global-set-key (kbd "C-x c") 'create_blog_stub)
+
+;; https://github.com/bbatsov/prelude/blob/master/doc/troubleshooting.md
+;; disable the arrow key navigation completely
+;; (setq guru-warn-only nil)
+
+;; Customize web-mode (mainly for Vue.js templates)
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-block-padding 0)
+  (setq web-mode-script-padding 0)
+  (setq web-mode-style-padding 0)
+  (setq web-mode-block-padding 0)
+)
+(add-hook 'web-mode-hook  'my-web-mode-hook)
