@@ -174,9 +174,9 @@ This doesn't support the chanserv and bitlbee auth method"
              "layout: post\n"
              (format "title: %s\n" post-title)
              "---\n\n"
-             "### <a id=\"part_1\" href=\"#part_1\">&#182;</a> Title 1: \n"
-             "### <a id=\"part_2\" href=\"#part_2\">&#182;</a> Title 2: \n"
-             "### <a id=\"part_3\" href=\"#part_3\">&#182;</a> Title 3: \n\n"
+             "### <a id=\"part_1\" href=\"#part_1\" class=\"header-anchor\">#</a> Title 1: \n"
+             "### <a id=\"part_2\" href=\"#part_2\" class=\"header-anchor\">#</a> Title 2: \n"
+             "### <a id=\"part_3\" href=\"#part_3\" class=\"header-anchor\">#</a> Title 3: \n\n"
              ))))
 (global-set-key (kbd "C-x c") 'create_blog_stub)
 
