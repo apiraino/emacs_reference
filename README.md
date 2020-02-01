@@ -1,3 +1,5 @@
+# This project is now archived and merged with my dotfiles: https://gitlab.com/apiraino/dotfiles/
+
 ## EMACS reference
 
 My personal, unfinished, ever work-in-progress and never-ending EMACS reference guide.
